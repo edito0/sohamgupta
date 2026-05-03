@@ -6,7 +6,12 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, #ffffff, #eef2ff, #ecfeff);
+background: linear-gradient(
+  120deg,
+  #0f172a,
+  #111827,
+  #1e293b
+);
   color: #111;
   overflow-x: hidden;
 }
@@ -29,14 +34,67 @@ h1, h2 {
 
 /* HEADER */
 header {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 120px 20px 80px;
+  height: 70vh;
+  position: relative;
+    color: rgba(255, 255, 255, 0.90);
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+/* scroll indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  opacity: 1;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 2rem;
+  animation: bounce 1.8s infinite;
+}
+
+/* scroll indicator */
+.scroll-indicator>div:nth-child(1){
+
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* scroll indicator */
+.scroll-indicator>div:first {
+
+  font-size: 1rem;
+   margin-bottom: 1rem;
+  /* font-weight: bolder; */
+}
+
+/* animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 .contact span {
   display: block;
   font-size: 0.9rem;
   opacity: 0.75;
+}
+
+.contact span a {
+      color: rgba(255, 255, 255, 0.90);
+  text-decoration: none;
 }
 
 /* SECTIONS */
